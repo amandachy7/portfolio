@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Amanda Cahayawulan — Developer Portfolio</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +12,6 @@
       rel="stylesheet"
     />
 
-    <!-- Vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <style>
@@ -24,14 +21,11 @@
         --orange: #e85d04;
         --orange-dark: #c94b00;
         --blue: #a9d6e5;
-        --blue-dark: #164e63;
         --yellow: #f5d547;
         --green: #b7d7b0;
         --pink: #f3b5c3;
         --black: #202020;
         --gray: #686868;
-        --white: #ffffff;
-
         --border: 2px solid var(--black);
         --shadow: 6px 6px 0 var(--black);
       }
@@ -41,31 +35,24 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       html {
         scroll-behavior: smooth;
       }
-
       body {
         font-family: "DM Sans", sans-serif;
         background: var(--cream);
         color: var(--black);
         overflow-x: hidden;
       }
-
       a {
         color: inherit;
         text-decoration: none;
       }
-
       button {
         font-family: inherit;
       }
 
-      /* =========================
-           NAVBAR
-        ========================= */
-
+      /* NAVBAR */
       .navbar {
         position: fixed;
         top: 18px;
@@ -83,45 +70,36 @@
         justify-content: space-between;
         box-shadow: 3px 3px 0 rgba(32, 32, 32, 0.15);
       }
-
       .logo {
         font-family: "Space Grotesk", sans-serif;
         font-size: 1.1rem;
         font-weight: 700;
         padding-left: 8px;
       }
-
       .nav-links {
         display: flex;
         gap: 6px;
         list-style: none;
       }
-
       .nav-links a {
         padding: 8px 14px;
         border-radius: 30px;
         font-size: 0.9rem;
         transition: 0.25s ease;
       }
-
       .nav-links a:hover {
         background: var(--black);
         color: white;
       }
 
-      /* =========================
-           GENERAL
-        ========================= */
-
+      /* GENERAL */
       .container {
         width: min(1100px, 90%);
         margin: auto;
       }
-
       section {
         padding: 120px 0;
       }
-
       .eyebrow {
         display: inline-block;
         font-size: 0.8rem;
@@ -131,7 +109,6 @@
         margin-bottom: 20px;
         color: var(--orange);
       }
-
       .section-title {
         font-family: "Space Grotesk", sans-serif;
         font-size: clamp(2.2rem, 5vw, 4.5rem);
@@ -139,10 +116,7 @@
         margin-bottom: 45px;
       }
 
-      /* =========================
-           HERO
-        ========================= */
-
+      /* HERO */
       .hero {
         min-height: 100vh;
         padding-top: 150px;
@@ -150,11 +124,9 @@
         align-items: center;
         position: relative;
       }
-
       .hero-content {
         max-width: 950px;
       }
-
       .hero h1 {
         font-family: "Space Grotesk", sans-serif;
         font-size: clamp(4rem, 11vw, 9rem);
@@ -162,29 +134,24 @@
         letter-spacing: -0.07em;
         margin-bottom: 35px;
       }
-
       .hero h1 span {
         color: var(--orange);
       }
-
       .hero-description {
         max-width: 700px;
         font-size: clamp(1.1rem, 2vw, 1.5rem);
         line-height: 1.6;
         color: var(--gray);
       }
-
       .hero-description strong {
         color: var(--black);
       }
-
       .hero-actions {
         display: flex;
         gap: 14px;
         margin-top: 35px;
         flex-wrap: wrap;
       }
-
       .btn {
         display: inline-flex;
         align-items: center;
@@ -197,22 +164,18 @@
         cursor: pointer;
         transition: 0.2s ease;
       }
-
       .btn-primary {
         background: var(--orange);
         color: white;
         box-shadow: 4px 4px 0 var(--black);
       }
-
       .btn-primary:hover {
         transform: translate(3px, 3px);
         box-shadow: 1px 1px 0 var(--black);
       }
-
       .btn-secondary {
         background: var(--cream);
       }
-
       .btn-secondary:hover {
         background: var(--yellow);
       }
@@ -235,26 +198,20 @@
         transform: rotate(12deg);
         animation: float 3s ease-in-out infinite;
       }
-
       @keyframes float {
         0%,
         100% {
           transform: rotate(12deg) translateY(0);
         }
-
         50% {
           transform: rotate(7deg) translateY(-10px);
         }
       }
 
-      /* =========================
-           PROJECTS
-        ========================= */
-
+      /* PROJECTS */
       #projects {
         background: var(--blue);
       }
-
       .projects-intro {
         display: flex;
         justify-content: space-between;
@@ -262,7 +219,6 @@
         gap: 30px;
         margin-bottom: 45px;
       }
-
       .projects-intro p {
         max-width: 420px;
         line-height: 1.6;
@@ -275,7 +231,6 @@
         flex-wrap: wrap;
         margin-bottom: 35px;
       }
-
       .filter-btn {
         padding: 8px 18px;
         border: var(--border);
@@ -285,7 +240,6 @@
         font-weight: 600;
         transition: 0.2s ease;
       }
-
       .filter-btn:hover,
       .filter-btn.active {
         background: var(--black);
@@ -309,17 +263,44 @@
         justify-content: space-between;
         position: relative;
         overflow: hidden;
+        isolation: isolate;
         cursor: pointer;
         transition: 0.3s ease;
       }
-
+      .project-card:nth-child(2n) {
+        background: #fff;
+      }
       .project-card:hover {
         transform: translate(-5px, -5px);
         box-shadow: var(--shadow);
       }
 
-      .project-card:nth-child(2n) {
-        background: #fff;
+      /* Foto sebagai background kartu */
+      .project-card.has-cover::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background-image: var(--cover);
+        background-size: cover;
+        background-position: top center;
+        transition: transform 0.4s ease;
+      }
+      /* Overlay krem supaya teks tetap terbaca */
+      .project-card.has-cover::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 250, 240, 0.35) 0%,
+          rgba(255, 250, 240, 0.88) 50%,
+          var(--cream) 100%
+        );
+      }
+      .project-card.has-cover:hover::before {
+        transform: scale(1.05);
       }
 
       .project-number {
@@ -327,7 +308,6 @@
         font-size: 0.9rem;
         color: var(--gray);
       }
-
       .project-year {
         position: absolute;
         top: 25px;
@@ -337,8 +317,8 @@
         padding: 6px 12px;
         border: 1.5px solid var(--black);
         border-radius: 30px;
+        background: var(--cream);
       }
-
       .project-card h3 {
         font-family: "Space Grotesk", sans-serif;
         font-size: clamp(1.8rem, 3vw, 3rem);
@@ -346,24 +326,23 @@
         max-width: 450px;
         margin-bottom: 15px;
       }
-
       .project-card p {
         color: var(--gray);
         line-height: 1.5;
         max-width: 500px;
       }
-
+      .project-card.has-cover p {
+        color: #4a4a4a;
+      }
       .project-bottom {
         margin-top: 30px;
       }
-
       .tech-list {
         display: flex;
         flex-wrap: wrap;
         gap: 7px;
         margin-bottom: 20px;
       }
-
       .tech {
         padding: 6px 11px;
         background: var(--cream-2);
@@ -372,35 +351,28 @@
         font-weight: 600;
         border: 1px solid #ccc;
       }
-
       .project-links {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
       }
-
       .project-link {
         font-size: 0.85rem;
         font-weight: 700;
         text-decoration: underline;
         text-underline-offset: 4px;
       }
-
       .project-link:hover {
         color: var(--orange);
       }
 
-      /* =========================
-           ABOUT
-        ========================= */
-
+      /* ABOUT */
       .about-grid {
         display: grid;
         grid-template-columns: 0.8fr 1.2fr;
         gap: 80px;
         align-items: center;
       }
-
       .about-visual {
         min-height: 420px;
         background: var(--pink);
@@ -413,12 +385,10 @@
         overflow: hidden;
         box-shadow: var(--shadow);
       }
-
       .about-emoji {
         font-size: 8rem;
         transform: rotate(-8deg);
       }
-
       .about-badge {
         position: absolute;
         bottom: 25px;
@@ -431,24 +401,20 @@
         font-weight: 700;
         transform: rotate(8deg);
       }
-
       .about-text {
         font-size: 1.1rem;
         line-height: 1.8;
         color: var(--gray);
       }
-
       .about-text strong {
         color: var(--black);
       }
-
       .experience {
         margin-top: 30px;
         display: flex;
         flex-direction: column;
         gap: 15px;
       }
-
       .experience-item {
         border-top: 1px solid #ccc;
         padding-top: 15px;
@@ -456,31 +422,24 @@
         justify-content: space-between;
         gap: 20px;
       }
-
       .experience-item strong {
         font-size: 0.95rem;
       }
-
       .experience-item span {
         color: var(--gray);
         font-size: 0.9rem;
         text-align: right;
       }
 
-      /* =========================
-           TOOLKIT
-        ========================= */
-
+      /* TOOLKIT */
       #toolkit {
         background: var(--cream-2);
       }
-
       .toolkit-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 15px;
       }
-
       .tool {
         min-height: 120px;
         border: var(--border);
@@ -492,232 +451,23 @@
         background: white;
         transition: 0.25s ease;
       }
-
       .tool:hover {
         transform: rotate(-2deg) translateY(-5px);
         box-shadow: 4px 4px 0 var(--black);
       }
-
       .tool-icon {
         font-size: 1.8rem;
+        font-weight: 700;
       }
-
       .tool-name {
         font-weight: 700;
       }
 
-      /* =========================
-           ACADEMIC PROJECTS
-        ========================= */
-
-      .academic-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      .academic-card {
-        padding: 25px;
-        border: var(--border);
-        border-radius: 20px;
-        background: white;
-      }
-
-      .academic-card h3 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 1.5rem;
-        margin: 10px 0;
-      }
-
-      .academic-card p {
-        color: var(--gray);
-        line-height: 1.6;
-        font-size: 0.95rem;
-      }
-
-      .academic-date {
-        font-size: 0.8rem;
-        color: var(--orange);
-        font-weight: 700;
-      }
-
-      /* =========================
-           CONTACT
-        ========================= */
-
-      #contact {
-        background: var(--orange);
-        color: white;
-        text-align: center;
-      }
-
-      .contact-content {
-        max-width: 800px;
-        margin: auto;
-      }
-
-      .contact-title {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(3.5rem, 8vw, 7rem);
-        line-height: 0.9;
-        margin-bottom: 25px;
-        letter-spacing: -0.06em;
-      }
-
-      .contact-text {
-        font-size: 1.1rem;
-        opacity: 0.9;
-        margin-bottom: 35px;
-      }
-
-      .socials {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .social {
-        background: white;
-        color: var(--black);
-        border: var(--border);
-        border-radius: 50px;
-        padding: 12px 20px;
-        font-weight: 700;
-        transition: 0.2s ease;
-      }
-
-      .social:hover {
-        background: var(--yellow);
-        transform: translateY(-3px);
-      }
-
-      /* =========================
-           FOOTER
-        ========================= */
-
-      footer {
-        padding: 30px 0;
-        background: var(--black);
-        color: white;
-      }
-
-      .footer-content {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        font-size: 0.85rem;
-      }
-
-      /* =========================
-           RESPONSIVE
-        ========================= */
-
-      @media (max-width: 850px) {
-        .nav-links {
-          display: none;
-        }
-
-        .hero-sticker {
-          width: 90px;
-          height: 90px;
-          font-size: 0.7rem;
-          right: 5%;
-          bottom: 8%;
-        }
-
-        .projects-grid,
-        .academic-list {
-          grid-template-columns: 1fr;
-        }
-
-        .about-grid {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-
-        .toolkit-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .projects-intro {
-          flex-direction: column;
-          align-items: start;
-        }
-      }
-
-      @media (max-width: 550px) {
-        section {
-          padding: 80px 0;
-        }
-
-        .hero h1 {
-          font-size: 4rem;
-        }
-
-        .hero-sticker {
-          display: none;
-        }
-
-        .project-card {
-          min-height: 330px;
-        }
-
-        /* PROJECT COVER */
-        .project-cover {
-          width: calc(100% + 60px);
-          height: 220px;
-          margin: -30px -30px 25px;
-          overflow: hidden;
-          border-bottom: var(--border);
-          background: var(--cream-2);
-        }
-
-        .project-cover img {
-          width: 100%;
-          height: 100%;
-          display: block;
-          object-fit: cover;
-          object-position: top;
-          transition: transform 0.35s ease;
-        }
-
-        .project-card:hover .project-cover img {
-          transform: scale(1.04);
-        }
-
-        @media (max-width: 550px) {
-          .project-cover {
-            height: 180px;
-          }
-        }
-
-        .toolkit-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .experience-item {
-          flex-direction: column;
-          gap: 5px;
-        }
-
-        .experience-item span {
-          text-align: left;
-        }
-
-        .footer-content {
-          flex-direction: column;
-        }
-      }
-
-      /* =========================
-            CERTIFICATES
-            ========================= */
-
+      /* CERTIFICATES */
       #certificates {
         background: var(--green);
+        padding: 90px 0;
       }
-
       .certificate-card {
         background: white;
         border: var(--border);
@@ -730,11 +480,9 @@
         box-shadow: var(--shadow);
         transition: 0.3s ease;
       }
-
       .certificate-card:hover {
         transform: translate(-4px, -4px);
       }
-
       .certificate-icon {
         width: 60px;
         height: 60px;
@@ -747,7 +495,6 @@
         font-size: 1.7rem;
         font-weight: 700;
       }
-
       .certificate-label {
         color: var(--orange);
         font-size: 0.75rem;
@@ -755,19 +502,16 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
-
       .certificate-info h3 {
         font-family: "Space Grotesk", sans-serif;
         font-size: 1.8rem;
         margin: 7px 0 10px;
       }
-
       .certificate-info p {
         color: var(--gray);
         line-height: 1.6;
         max-width: 650px;
       }
-
       .certificate-link {
         display: inline-block;
         margin-top: 15px;
@@ -776,17 +520,158 @@
         text-decoration: underline;
         text-underline-offset: 4px;
       }
-
       .certificate-link:hover {
         color: var(--orange-dark);
       }
-
       .certificate-badge {
         padding: 12px 18px;
         border: var(--border);
         border-radius: 30px;
         font-weight: 700;
         background: var(--cream);
+      }
+
+      /* ACADEMIC */
+      .academic-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .academic-card {
+        padding: 25px;
+        border: var(--border);
+        border-radius: 20px;
+        background: white;
+      }
+      .academic-card h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.5rem;
+        margin: 10px 0;
+      }
+      .academic-card p {
+        color: var(--gray);
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+      .academic-date {
+        font-size: 0.8rem;
+        color: var(--orange);
+        font-weight: 700;
+      }
+
+      /* CONTACT */
+      #contact {
+        background: var(--orange);
+        color: white;
+        text-align: center;
+      }
+      .contact-content {
+        max-width: 800px;
+        margin: auto;
+      }
+      .contact-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(3.5rem, 8vw, 7rem);
+        line-height: 0.9;
+        margin-bottom: 25px;
+        letter-spacing: -0.06em;
+      }
+      .contact-text {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 35px;
+      }
+      .socials {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .social {
+        background: white;
+        color: var(--black);
+        border: var(--border);
+        border-radius: 50px;
+        padding: 12px 20px;
+        font-weight: 700;
+        transition: 0.2s ease;
+      }
+      .social:hover {
+        background: var(--yellow);
+        transform: translateY(-3px);
+      }
+
+      /* FOOTER */
+      footer {
+        padding: 30px 0;
+        background: var(--black);
+        color: white;
+      }
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 0.85rem;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 850px) {
+        .nav-links {
+          display: none;
+        }
+        .hero-sticker {
+          width: 90px;
+          height: 90px;
+          font-size: 0.7rem;
+          right: 5%;
+          bottom: 8%;
+        }
+        .projects-grid,
+        .academic-list {
+          grid-template-columns: 1fr;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .toolkit-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .projects-intro {
+          flex-direction: column;
+          align-items: start;
+        }
+        .certificate-card {
+          grid-template-columns: 60px 1fr;
+        }
+        .certificate-badge {
+          display: none;
+        }
+      }
+
+      @media (max-width: 550px) {
+        section {
+          padding: 80px 0;
+        }
+        .hero h1 {
+          font-size: 4rem;
+        }
+        .hero-sticker {
+          display: none;
+        }
+        .project-card {
+          min-height: 330px;
+        }
+        .experience-item {
+          flex-direction: column;
+          gap: 5px;
+        }
+        .experience-item span {
+          text-align: left;
+        }
+        .footer-content {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
@@ -795,61 +680,40 @@
     <div id="app">
       <!-- NAVBAR -->
       <nav class="navbar">
-        <a href="#home" class="logo"> Amanda ✦ </a>
-
+        <a href="#home" class="logo">Amanda ✦</a>
         <ul class="nav-links">
-          <li>
-            <a href="#projects">Work</a>
-          </li>
-
-          <li>
-            <a href="#about">About</a>
-          </li>
-
-          <li>
-            <a href="#toolkit">Toolkit</a>
-          </li>
-
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#toolkit">Toolkit</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- =========================
-             HERO
-        ========================== -->
-
+      <!-- HERO -->
       <section id="home" class="hero">
         <div class="container">
           <div class="hero-content">
-            <span class="eyebrow"> Developer · IT · Creative </span>
-
+            <span class="eyebrow">Developer · IT · Creative</span>
             <h1>
               Hello! I'm<br />
               <span>Amanda.</span> 👋
             </h1>
-
             <p class="hero-description">
               An Information Systems developer who enjoys
               <strong>building useful digital experiences</strong>, solving
               problems, and turning ideas into functional web applications.
             </p>
-
             <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary"> See my work ↓ </a>
-
+              <a href="#projects" class="btn btn-primary">See my work ↓</a>
               <a
                 href="https://github.com/amandachy7"
                 target="_blank"
                 class="btn btn-secondary"
+                >GitHub ↗</a
               >
-                GitHub ↗
-              </a>
             </div>
           </div>
         </div>
-
         <div class="hero-sticker">
           Let's<br />
           build<br />
@@ -857,30 +721,23 @@
         </div>
       </section>
 
-      <!-- =========================
-             SELECTED WORKS
-        ========================== -->
-
+      <!-- SELECTED WORKS -->
       <section id="projects">
         <div class="container">
           <div class="projects-intro">
             <div>
-              <span class="eyebrow"> Selected works </span>
-
+              <span class="eyebrow">Selected works</span>
               <h2 class="section-title">
                 Things I've<br />
                 built ✨
               </h2>
             </div>
-
             <p>
               A collection of web applications, internal systems, freelance
               projects, and development work I've worked on throughout my
               studies and professional experience.
             </p>
           </div>
-
-          <!-- FILTER -->
 
           <div class="filter-buttons">
             <button
@@ -890,7 +747,6 @@
             >
               All
             </button>
-
             <button
               class="filter-btn"
               :class="{ active: filter === '2026' }"
@@ -898,7 +754,6 @@
             >
               2026
             </button>
-
             <button
               class="filter-btn"
               :class="{ active: filter === '2025' }"
@@ -906,7 +761,6 @@
             >
               2025
             </button>
-
             <button
               class="filter-btn"
               :class="{ active: filter === 'academic' }"
@@ -916,56 +770,42 @@
             </button>
           </div>
 
-          <!-- PROJECT GRID -->
-
           <div class="projects-grid">
             <article
               class="project-card"
+              :class="{ 'has-cover': project.image }"
+              :style="project.image ? { '--cover': 'url(' + project.image + ')' } : {}"
               v-for="(project, index) in filteredProjects"
               :key="project.title"
             >
-              <div v-if="project.image" class="project-cover">
-                <img
-                  :src="project.image"
-                  :alt="project.title + ' application screenshot'"
-                  loading="lazy"
-                />
-              </div>
               <div>
-                <span class="project-number"> 0{{ index + 1 }} </span>
-
-                <span class="project-year"> {{ project.year }} </span>
-
+                <span class="project-number">0{{ index + 1 }}</span>
+                <span class="project-year">{{ project.year }}</span>
                 <h3>{{ project.title }}</h3>
-
                 <p>{{ project.description }}</p>
               </div>
 
               <div class="project-bottom">
                 <div class="tech-list">
-                  <span class="tech" v-for="tech in project.tech" :key="tech">
-                    {{ tech }}
-                  </span>
+                  <span class="tech" v-for="tech in project.tech" :key="tech"
+                    >{{ tech }}</span
+                  >
                 </div>
-
                 <div class="project-links">
                   <a
                     v-if="project.live"
                     :href="project.live"
                     target="_blank"
                     class="project-link"
+                    >View live ↗</a
                   >
-                    View live ↗
-                  </a>
-
                   <a
                     v-if="project.github"
                     :href="project.github"
                     target="_blank"
                     class="project-link"
+                    >GitHub ↗</a
                   >
-                    GitHub ↗
-                  </a>
                 </div>
               </div>
             </article>
@@ -973,16 +813,12 @@
         </div>
       </section>
 
-      <!-- =========================
-             ABOUT
-        ========================== -->
-
+      <!-- ABOUT -->
       <section id="about">
         <div class="container">
           <div class="about-grid">
             <div class="about-visual">
               <div class="about-emoji">👩🏻‍💻</div>
-
               <div class="about-badge">
                 Information System<br />
                 → Developer
@@ -990,8 +826,7 @@
             </div>
 
             <div>
-              <span class="eyebrow"> About me 🌸 </span>
-
+              <span class="eyebrow">About me 🌸</span>
               <h2 class="section-title">
                 A little bit<br />
                 about me.
@@ -1003,16 +838,12 @@
                   >web development, IT systems, and digital problem
                   solving.</strong
                 >
-
                 <br /><br />
-
                 My experience includes developing web-based applications using
-                Laravel, PHP and MySQL, working on internal company systems,
-                supporting IT operations, and translating designs from Figma
-                into responsive websites.
-
+                Laravel, PHP, Vue.js, Next.js and MySQL/PostgreSQL, working on
+                internal company systems, supporting IT operations, and
+                translating designs from Figma into responsive websites.
                 <br /><br />
-
                 I enjoy working across both the technical and practical sides of
                 a project — from understanding the problem, designing the
                 solution, building the system, to making sure it actually works.
@@ -1020,23 +851,18 @@
 
               <div class="experience">
                 <div class="experience-item">
-                  <strong> Web Development </strong>
-
-                  <span>
-                    Laravel · PHP · MySQL · MySQL · PostgreSQL · Next.JS
-                  </span>
+                  <strong>Web Development</strong>
+                  <span
+                    >Laravel · PHP · Vue.js · Next.js · MySQL · PostgreSQL</span
+                  >
                 </div>
-
                 <div class="experience-item">
-                  <strong> IT Support </strong>
-
-                  <span> Troubleshooting · Internal Systems </span>
+                  <strong>IT Support</strong>
+                  <span>Troubleshooting · Internal Systems</span>
                 </div>
-
                 <div class="experience-item">
-                  <strong> UI Implementation </strong>
-
-                  <span> Figma → HTML · Responsive UI </span>
+                  <strong>UI Implementation</strong>
+                  <span>Figma → HTML · Responsive UI</span>
                 </div>
               </div>
             </div>
@@ -1044,149 +870,118 @@
         </div>
       </section>
 
-      <!-- =========================
-             TOOLKIT
-        ========================== -->
-
+      <!-- TOOLKIT -->
       <section id="toolkit">
         <div class="container">
-          <span class="eyebrow"> My toolkit 💻 </span>
-
+          <span class="eyebrow">My toolkit 💻</span>
           <h2 class="section-title">
             Tools I like<br />
             to work with.
           </h2>
-
           <div class="toolkit-grid">
             <div class="tool" v-for="tool in tools" :key="tool.name">
-              <span class="tool-icon"> {{ tool.icon }} </span>
-
-              <span class="tool-name"> {{ tool.name }} </span>
+              <span class="tool-icon">{{ tool.icon }}</span>
+              <span class="tool-name">{{ tool.name }}</span>
             </div>
           </div>
         </div>
       </section>
 
-      <div class="certificate-card">
-        <div class="certificate-icon">✓</div>
-
-        <div class="certificate-info">
-          <span class="certificate-label"> Professional Certification </span>
-
-          <h3>BNSP — Database Administrator</h3>
-
-          <p>
-            Certified competency in database administration, including database
-            management and related technical competencies.
-          </p>
-
-          <a
-            href="https://drive.google.com/file/d/1ZnbkeIwJzUp1p9w5RZyl24pikZUSH6_W/view?usp=drive_link"
-            target="_blank"
-            class="certificate-link"
-          >
-            View Certificate ↗
-          </a>
+      <!-- CERTIFICATE -->
+      <section id="certificates">
+        <div class="container">
+          <div class="certificate-card">
+            <div class="certificate-icon">✓</div>
+            <div class="certificate-info">
+              <span class="certificate-label">Professional Certification</span>
+              <h3>BNSP — Database Administrator</h3>
+              <p>
+                Certified competency in database administration, including
+                database management and related technical competencies.
+              </p>
+              <a
+                href="https://drive.google.com/file/d/1ZnbkeIwJzUp1p9w5RZyl24pikZUSH6_W/view?usp=drive_link"
+                target="_blank"
+                class="certificate-link"
+              >
+                View Certificate ↗
+              </a>
+            </div>
+            <div class="certificate-badge">BNSP</div>
+          </div>
         </div>
+      </section>
 
-        <div class="certificate-badge">BNSP</div>
-      </div>
-
-      <!-- =========================
-             ACADEMIC PROJECTS
-        ========================== -->
-
+      <!-- ACADEMIC PROJECTS -->
       <section>
         <div class="container">
-          <span class="eyebrow"> Earlier projects 📚 </span>
-
+          <span class="eyebrow">Earlier projects 📚</span>
           <h2 class="section-title">
             Where it<br />
             started.
           </h2>
-
           <div class="academic-list">
             <article
               class="academic-card"
               v-for="project in academicProjects"
               :key="project.title"
             >
-              <span class="academic-date"> {{ project.date }} </span>
-
+              <span class="academic-date">{{ project.date }}</span>
               <h3>{{ project.title }}</h3>
-
               <p>{{ project.description }}</p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- =========================
-             CONTACT
-        ========================== -->
-
+      <!-- CONTACT -->
       <section id="contact">
         <div class="container">
           <div class="contact-content">
-            <span class="eyebrow" style="color: #fff"> Let's connect 💌 </span>
-
+            <span class="eyebrow" style="color: #fff">Let's connect 💌</span>
             <h2 class="contact-title">
               Got a project<br />
               in mind?
             </h2>
-
             <p class="contact-text">
               Whether it's a web project, collaboration, or just a quick chat —
               feel free to reach out!
             </p>
-
             <div class="socials">
-              <a href="amandacahaya7@gmail.com" class="social"> Email ↗ </a>
-
+              <a href="mailto:amandacahaya7@gmail.com" class="social"
+                >Email ↗</a
+              >
               <a
                 href="https://github.com/amandachy7"
                 target="_blank"
                 class="social"
+                >GitHub ↗</a
               >
-                GitHub ↗
-              </a>
-
               <a
                 href="https://www.linkedin.com/in/amanda-cahayawulan"
                 target="_blank"
                 class="social"
+                >LinkedIn ↗</a
               >
-                LinkedIn ↗
-              </a>
-
               <a
                 href="https://wa.me/6289517048812"
                 target="_blank"
                 class="social"
+                >WhatsApp ↗</a
               >
-                WhatsApp ↗
-              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- =========================
-             FOOTER
-        ========================== -->
-
+      <!-- FOOTER -->
       <footer>
         <div class="container footer-content">
-          <span> © 2026 Amanda Cahayawulan </span>
-
-          <span> Designed & built with ☕ + code </span>
+          <span>© 2026 Amanda Cahayawulan</span>
+          <span>Designed & built with ☕ + code</span>
         </div>
       </footer>
     </div>
-
-    <!-- =========================
-         VUE APP
-    ========================== -->
 
     <script>
       const { createApp } = Vue;
@@ -1195,10 +990,6 @@
         data() {
           return {
             filter: "all",
-
-            /* =========================
-                       MAIN PROJECTS
-                    ========================== */
 
             projects: [
               {
@@ -1212,256 +1003,134 @@
                 github: "https://github.com/amandachy7/data-entry-app",
                 live: null,
               },
-
               {
                 year: "2026",
                 category: "2026",
-
                 title: "Freelance CRM",
-
                 description:
                   "A customer relationship management system developed as a freelance project, focused on organizing customer data and streamlining business processes.",
-
                 tech: ["Laravel", "PHP", "MySQL"],
-
                 github: "https://github.com/amandachy7/stock",
-
                 live: null,
               },
-
               {
                 year: "2024",
                 category: "academic",
-
                 title: "Stock Management",
-
                 description:
                   "A web-based stock management project for managing inventory data and supporting more structured stock monitoring.",
-
                 tech: ["PHP", "MySQL", "Web Development"],
-
                 github: "https://github.com/amandachy7/laravel",
-
                 live: null,
               },
-
               {
                 year: "2026",
                 category: "2026",
-
                 title: "IRD & Ticketing System",
-
                 description:
                   "Worked on internal company systems including the IRD and ticketing modules, supporting system functionality and troubleshooting operational issues.",
-
+                image: "ird.png",
                 tech: ["PHP", "Laravel", "MySQL", "IT Support"],
-
                 live: "https://sim.madawikri.co.id/",
-
                 github: null,
               },
-
               {
                 year: "2025",
                 category: "2025",
-
                 title: "Recruitment System",
-
                 description:
                   "A web-based recruitment and assessment system developed for managing recruitment processes and candidate data.",
-
+                image: "rekrutmen.png",
                 tech: ["Laravel", "PHP", "MySQL"],
-
                 live: "https://sim.madawikri.co.id/rekrutment/rekrutment",
-
                 github: null,
               },
-
               {
                 year: "2025",
                 category: "2025",
-
                 title: "Company Career Website",
-
                 description:
                   "Worked on the company career website and its recruitment-related web content to support online job information and applications.",
-
+                image: "Company-Career-Website.png",
                 tech: ["PHP", "HTML", "CSS", "JavaScript"],
-
                 live: "https://madawikri.co.id/karir",
-
                 github: null,
               },
-
-              {
-                year: "2025",
-                category: "academic",
-
-                title: "Artikel Platform",
-
-                description:
-                  "A web development project focused on creating and managing article-based content.",
-
-                tech: ["Web Development", "PHP", "MySQL"],
-
-                github: "https://github.com/amandachy7/artikel",
-
-                live: null,
-              },
-
               {
                 year: "2025",
                 category: "2025",
-
+                title: "Artikel Platform",
+                description:
+                  "A web development project focused on creating and managing article-based content.",
+                tech: ["Web Development", "PHP", "MySQL"],
+                github: "https://github.com/amandachy7/artikel",
+                live: null,
+              },
+              {
+                year: "2025",
+                category: "2025",
                 title: "Figma → HTML",
-
                 description:
                   "Translated several UI designs from Figma into responsive HTML/CSS implementations.",
-
                 tech: ["Figma", "HTML", "CSS", "Responsive UI"],
-
                 github: null,
                 live: null,
               },
-
               {
                 year: "2024",
                 category: "academic",
-
                 title: "Motorcycle Rental Website",
-
                 description:
                   "A motorcycle rental website designed with a focus on user-friendly interfaces, responsive design, booking flow, and availability management.",
-
                 tech: ["Laravel", "PHP", "MySQL", "HTML", "CSS"],
-
                 live: "https://amandachy7.github.io/MotoExplorer/",
-
                 github: null,
               },
-
               {
                 year: "2026",
                 category: "2026",
-
                 title: "News Platform",
-
                 description:
                   "A news platform project exploring modern web development with Next.js, featuring a structured frontend architecture and component-based development.",
-
                 tech: ["Next.js", "JavaScript", "React", "Tailwind CSS"],
-
                 github: "https://github.com/amandachy7/News-Node.js",
-
                 live: null,
               },
             ],
 
-            /* =========================
-                       TOOLKIT
-                    ========================== */
-
             tools: [
-              {
-                name: "Laravel",
-                icon: "◆",
-              },
-
-              {
-                name: "Livewire",
-                icon: "⚡",
-              },
-
-              {
-                name: "PHP",
-                icon: "🐘",
-              },
-
-              {
-                name: "JavaScript",
-                icon: "JS",
-              },
-
-              {
-                name: "HTML & CSS",
-                icon: "🌐",
-              },
-
-              {
-                name: "Bootstrap",
-                icon: "B",
-              },
-
-              {
-                name: "Tailwind CSS",
-                icon: "TW",
-              },
-
-              {
-                name: "Next.js",
-                icon: "N",
-              },
-
-              {
-                name: "REST API",
-                icon: "↔",
-              },
-
-              {
-                name: "MySQL",
-                icon: "🗄️",
-              },
-
-              {
-                name: "PostgreSQL",
-                icon: "PG",
-              },
-
-              {
-                name: "Git",
-                icon: "⌘",
-              },
-
-              {
-                name: "Figma",
-                icon: "✦",
-              },
-
-              {
-                name: "Python",
-                icon: "🐍",
-              },
-
-              {
-                name: "Flask",
-                icon: "⚗️",
-              },
-
-              {
-                name: "Flutter",
-                icon: "◆",
-              },
+              { name: "Laravel", icon: "◆" },
+              { name: "Livewire", icon: "⚡" },
+              { name: "PHP", icon: "🐘" },
+              { name: "JavaScript", icon: "JS" },
+              { name: "Vue.js", icon: "V" },
+              { name: "React", icon: "⚛️" },
+              { name: "Next.js", icon: "N" },
+              { name: "Node.js", icon: "⬢" },
+              { name: "HTML & CSS", icon: "🌐" },
+              { name: "Bootstrap", icon: "B" },
+              { name: "Tailwind CSS", icon: "TW" },
+              { name: "REST API", icon: "↔" },
+              { name: "MySQL", icon: "🗄️" },
+              { name: "PostgreSQL", icon: "PG" },
+              { name: "Git", icon: "⌘" },
+              { name: "Figma", icon: "✦" },
+              { name: "Python", icon: "🐍" },
+              { name: "Flask", icon: "⚗️" },
+              { name: "Flutter", icon: "◇" },
+              { name: "Vite", icon: "⚡" },
             ],
-
-            /* =========================
-                       ACADEMIC PROJECTS
-                    ========================== */
 
             academicProjects: [
               {
                 title: "Library Book Borrowing Management System",
-
                 date: "December 2023 — January 2024",
-
                 description:
                   "Designed and implemented a structured database for books, users, and borrowing transactions. Developed admin functionality for adding, updating, and deleting book records using HTML, CSS, JavaScript, PHP, and MySQL.",
               },
-
               {
                 title: "Employee Salary Calculator",
-
                 date: "May 2023 — June 2023",
-
                 description:
                   "A programming assignment developed using the C programming language for calculating employee salaries as part of the Dasar Pemrograman course.",
               },
@@ -1471,13 +1140,8 @@
 
         computed: {
           filteredProjects() {
-            if (this.filter === "all") {
-              return this.projects;
-            }
-
-            return this.projects.filter(
-              (project) => project.category === this.filter,
-            );
+            if (this.filter === "all") return this.projects;
+            return this.projects.filter((p) => p.category === this.filter);
           },
         },
       }).mount("#app");
